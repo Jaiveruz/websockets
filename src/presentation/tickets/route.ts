@@ -15,7 +15,7 @@ export class TicketRoute {
 
         router.post('/', ticketsController.createTicket);
 
-        router.post('/draw/:desk', ticketsController.drawTicket);
+        router.get('/draw/:desk', ticketsController.drawTicket);
         router.put('/done/:ticketId', ticketsController.ticketfinished);
 
         router.get('/working-on', ticketsController.workingOn);
